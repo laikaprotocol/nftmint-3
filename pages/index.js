@@ -43,7 +43,7 @@ export default function Mint() {
       .then(function (accounts) {
         window.web3.eth.net.getNetworkType()
         // checks if connected network is mainnet (change this to rinkeby if you wanna test on testnet)
-        .then((network) => {console.log(network);if(network != "main"){alert("You are on " + network+ " network. Change network to mainnet or you won't be able to do anything here")} });  
+        .then((network) => {console.log(network);if(network != "main"){console.log("You are on " + network+ " network. Change network to mainnet or you won't be able to do anything here")} });  
         let wallet = accounts[0]
         setWalletAddress(wallet)
         setSignedIn(true)
@@ -132,8 +132,10 @@ export default function Mint() {
       <div >
           <div className="flex items-center justify-between w-full border-b-2	pb-6">
             <a href="/" className=""><img src="images/Hola.gif" width="108" alt="" className="logo-image" /></a>
+			<a href="/" className=""><img src="images/logo2.png" width="108" alt="" className="logo-image" /></a>
             <nav className="flex flex-wrap flex-row justify-around Poppitandfinchsans">
               <a href="https://rivrdoge.com" className="text-4xl text-white hover:text-black m-6">Home</a>
+			  <a href="https://t.me/WiseMovrs" className="text-4xl text-white hover:text-black m-6">WiseMovrs</a>
               <a href="https://twitter.com/rivrdoge" className="text-4xl  hover:text-white m-6 text-blau">TWITTER</a>
               <a href="https://t.me/rivrdogeofficial" className="text-4xl  hover:text-white m-6 text-blau">TELEGRAM</a>
             </nav>
@@ -153,7 +155,7 @@ export default function Mint() {
 
             <div className="flex flex-col items-center">
 
-                <span className="flex Poppitandfinchsans text-5xl text-white items-center bg-grey-lighter rounded rounded-r-none my-4 ">TOTAL MAID MINTED:  <span className="text-blau text-6xl"> {!signedIn ?  <>-</>  :  <>{totalSupply}</> } / 1024</span></span>
+                <span className="flex Poppitandfinchsans text-5xl text-white items-center bg-grey-lighter rounded rounded-r-none my-4 ">TOTAL MAID MINTED:  <span className="text-blau text-6xl"> {!signedIn ?  <>-</>  :  <>{totalSupply}</> } / 8888</span></span>
 
                 <div id="mint" className="flex justify-around  mt-8 mx-6">
                   <span className="flex Poppitandfinchsans text-5xl text-white items-center bg-grey-lighter rounded rounded-r-none px-3 font-bold">GIMME</span>
